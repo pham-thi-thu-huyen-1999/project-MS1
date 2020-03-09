@@ -1,0 +1,22 @@
+import I{camelName} from "./interfaces/I{camelName}"; // eslint-disable-line
+
+class {camelName}Create {
+    name: string;
+
+    constructor(model: I{camelName}) {
+        if (!model)
+            return;
+
+        this.name = model.name;
+
+        Object.keys(this).forEach(key => {
+            if (this[key] == undefined)
+                delete this[key];
+            if (this[key] == null || this[key] == 'null')
+                this[key] = undefined;
+        });
+    }
+}
+
+Object.seal({camelName}Create);
+export default {camelName}Create;

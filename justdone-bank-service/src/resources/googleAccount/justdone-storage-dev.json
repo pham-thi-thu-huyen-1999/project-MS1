@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fast-rabbit-205105",
+  "private_key_id": "a40e6a21b2fdb096612507d99618092e1e34b330",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDTOv3uCEgdcekK\n37Hkd+tM8E3fBudfWwvF3Y5FbPLFULAcIsVpSzlbrxvyzjCkwYHWDo22G0tHRqBH\nAhPUtGQn3Y+xLnNl7uxlnP9N79cV9BdilRESR8HjnTl4kVZXLhVOh6kZHc/VZlPd\nNygY0LIjFc6QEpnV1kC/7pcM6iwKIKRrLNhBi44GTkpp3pFVcOoJZFSVGDaTymVg\nuc1AqdmhwV6zW7HzDz7iwm0XI7xTREZfeJnH1J/9UE2NbX/NVqMR1Rzy8+nZsuKq\nOK9D2ga4Vn95GLadPxNMtn1LPLgmWRq8ykRSJLFNmKMEHnE06Qgnn6u5lVdZQuXO\nxrD7orLZAgMBAAECggEACX74LfSI22wEzESYsHr0pNGTyqA6lBaZfaRzcisO8fBp\n7mXgxpZHZpgFc2GyHaIGZntigwqQlIx4BaEyB4ixjPpArLg4H1/BmGLZtmT/ICFI\nUNn/ObloncUycXllLoenlQ9zummU75TJVeNWJeFx9LJVBjST3mFiqU4+U6oOX0kZ\n7XpD27FPID9mJ3X0L/N+EVgYs7HEq/aHzDhCca2oygMMOA+98vHK9nymCu5dGI0+\nXz3V9xy19p7rXlyq6Wd05iLsusGdT1r2SHMHcGs/9XiZ4HipmUFCLw6qEId8fKtH\nCdn5Be8sPMDAfnerN8m/hzj3Jx78zSpnobY8jv2kFQKBgQD5bsWb7F/IVTPyBllP\nt2NfYvZk3KZFCTTDRjnFnuJ0NMwSI2I66JVhqQBHtpkJ0JwytASGjOCT4lbLU3OD\no486H4Kj8FOaoSr8Kw19M1a4AIOP5g8SDVH3fHklaU1/U6u+nQ/v+A03a5TDdgWh\nEtUq4kY2Dpgl6jrvLEseRzNKnQKBgQDYyrqT2z/nLto6mP30nolx/M5ABm56w6HM\nAZnjGZz0BOZVexo+TqRcie0yjkad1n9rPArPvi9+yxFRSGs49VSaDZlojPJ1UyOY\nbwYEK1h1pblRA+0ddIvn2PEbvN8UqcW8eU+CTZsfFtLS9Wq2atncA3cv2B3DDFl2\nVNB8EmlGbQKBgQDqPT1z/RnB/0ml6pJqyzSV+lCbTZ8TS97x1vwf+uJ88KwICJSR\n76OBL/1kWzUCw5Y8A1QQqzGnjzGlBfx/zdSOZ9L+c41/tASzBRdI0TKJ32mtdAYJ\nFNs5x/nYyTgO75tkiQjTeSWoOu5cVHRa3F21RQNcdn4pdPrdasIsb/7Z/QKBgBny\nicpQn6Fn9i61SRASOZkvDPCU1HxVFfR47JZF5oc+XuM0TLvQZdO9nmpCpSkXF0Ea\neqDKvpyKaZQ0+sBifLHDluzwkcSBIu2HvEybc4cBQuDze1nfLS+ew5zySjEK8OPS\nETYjW8Go1aryPMeAmnq+33EWiNljjQGgvSNcgMUxAoGBAPMKBGqqaVaBJFdV4SRU\nA9K+8J0F3xK4Vbu4sGQkhkqnZAxHo+gu/3wfx1T+9WTWmqBQ3eo0LOVfw/SdHzAw\n9IqFkMsyw12vTiL01rltwL/sTCnWzX0eqhX5ezhzKIXwJnOOo50PGJHfJbpBVAc4\nbZJf22fHExe7/YTsGLzJk91H\n-----END PRIVATE KEY-----\n",
+  "client_email": "storage-management-dev@fast-rabbit-205105.iam.gserviceaccount.com",
+  "client_id": "110461326332115964462",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/storage-management-dev%40fast-rabbit-205105.iam.gserviceaccount.com"
+}
