@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div class="container" id="app">
+    <div class="row">
+        <div class="col-sm-4 col-md-2 col-lg-2">   
+            <div class="form-group">
+                <label >Product list</label>
+                <select class="form-control" id="product" v-model="productSelected" @change="changeProduct()">
+                    <option></option>
+                    <option v-for="product in products" :value="product._id">{{ product.name | uppercase}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-2 col-lg-2">
+            <div class="form-group">
+                <label for="sel1">Module list</label>
+                <select class="form-control" id="module" v-model="moduleNameSelected" @change="changeModule()">
+                    <option value=""></option>
+                    <option v-for="(module, key) in modules" :value="key">{{ key }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-2 col-lg-2">
+            <div class="form-group">
+                <label for="usr">Claim</label>
+                <select class="form-control" name="" v-model="claimNameSelected" id="claim" @change="changeClaim()">
+                    <option value=""></option>
+                    <option v-for="(claim, key) in claims" :value="key">{{ key }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-2 col-lg-2">  
+            <div class="form-group"> 
+                <label>From Roles list</label>
+                <select class="js-example-basic-multiple form-control" id="from_roles"  multiple @change="getSelectedFromRole()">
+                    <option v-for="role in roles" :value="role._id" :data-level="role.level">{{ role.name }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-2 col-lg-2">   
+            <div class="form-group"> 
+                <label >To Roles list</label>
+                <select class="form-control" id="to_roles" v-model="rolesToSelected">
+                    <option></option>
+                    <option v-for="role in rolesTo" :value="role._id" data-level="role.level">{{ role.name }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 pull-right">  
+            <button type="button" id="button_remove" class="btn btn-danger btn-md">Remove</button>
+            <button type="button" id="button_add" class="btn btn-success btn-md" @click="submit()">Add</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+$(document).ready(function() {
+    $('#from_roles').select2();
+    // $('#to_roles').select2();
+});
+
+Vue.filter('uppercase', function (value) {
+  if (!value) return '';
+  return value.toUpperCase();
+})
+
+new Vue({
+    el: '#app',
+    data: {
+        products: [],
+        roles: [],
+        rolesTo: [],
+        modules: {},
+        claims: {},
+        productSelected: null,
+        moduleNameSelected: null,
+        moduleCodeSelected: null,
+        claimNameSelected: null,
+        claimCodeSelected: null,
+        rolesFromSelected: [],
+        rolesToSelected: '',
+    },
+    mounted() {
+        this.getProduct();
+        // this.getRoles();
+        this.getSelectedFromRole();
+        this.getModules();
+    },
+    methods: {
+        sendAjax(method, url, data) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            // if (method != 'GET') {
+            //     xhr.setRequestHeader('X-CSRF-TOKEN', $('#csrf-token').attr('content'));
+            // }
+            xhr.withCredentials = true;
+            if (!data) {
+                xhr.send();
+            } else {
+                xhr.send(JSON.stringify(data));
+            }
+            return xhr;
+        },
+
+        getProduct() {
+            let vmThis = this;
+            let xhr = this.sendAjax('GET', '/api/product/all');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    vmThis.products = JSON.parse(xhr.responseText).data;
+                    Vue.set(vmThis, 'products', vmThis.products);
+                }
+            }
+        },
+
+        getRolesByProduct(productId) {
+            let vmThis = this;
+            this.roles = [];
+            this.rolesFromSelected = [];
+            this.rolesToSelected = [];
+            
+            if (!productId) 
+                return;
+            
+            let xhr = this.sendAjax('GET', `/api/role/product/${productId}`);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    vmThis.roles = JSON.parse(xhr.responseText).data;
+                    Vue.set(vmThis, 'roles', vmThis.roles)
+                }
+            }
+        },
+
+        getRoles() {
+            let vmThis = this;
+            this.roles = [];
+            this.rolesFromSelected = [];
+            this.rolesToSelected = [];
+            
+            let xhr = this.sendAjax('GET', `/api/role/all`);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    vmThis.roles = JSON.parse(xhr.responseText).data;
+                    Vue.set(vmThis, 'roles', vmThis.roles)
+                }
+            }
+        },
+
+        getSelectedFromRole() {
+            let vmThis = this;
+            this.rolesFromSelected = [];
+            $('#from_roles').change(function() {
+                let rolesFromSelected = $('#from_roles').val();
+                vmThis.rolesFromSelected = vmThis.tranformerRoleSelected(rolesFromSelected);
+                vmThis.getRoleTo();
+            });
+        },
+
+        getModules() {
+            let vmThis = this;
+            this.modules = {};
+            this.moduleSelected = '';
+            
+            let xhr = this.sendAjax('GET', `/api/permission/module`);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    let data = JSON.parse(xhr.responseText).data;
+                    Vue.set(vmThis, 'modules', data);
+                }
+            }
+        },
+
+        changeProduct() {
+            this.getRolesByProduct(this.productSelected);
+        },
+
+        changeModule() {
+            this.moduleCodeSelected = this.modules[this.moduleNameSelected].code;
+            this.claims = this.modules[this.moduleNameSelected].claim;
+        },
+
+        changeClaim() {
+            this.claimCodeSelected = this.modules[this.moduleNameSelected].claim[this.claimNameSelected].code;
+        },
+
+        submit() {
+            // var values = document.querySelector('#from_roles').value;
+            // console.log('this.productSelected: ', this.productSelected);
+            // console.log('this.module: ', this.moduleSelected);
+            // console.log('this.claim: ', this.claimCodeSelected);
+            // console.log('this.rolesFromSelected: ', this.rolesFromSelected);
+            // console.log('this.rolesToSelected: ', this.rolesToSelected);
+
+            let fromRoles = this.rolesFromSelected.map(role => role._id);
+            console.log('fromRoles: ', fromRoles);
+            let data = {
+                product: this.productSelected,
+                claim: this.claimCodeSelected,
+                fromRole: fromRoles,
+                toRole: this.rolesToSelected
+            }
+            console.log('data: ', data);
+            let xhr = this.sendAjax('POST', '/api/permission', data);
+            xhr.onload = function() {
+            console.log('xhr: ', xhr);
+                if (xhr.status === 200) {
+                    console.log('done')
+                    console.log(JSON.parse(xhr.responseText));
+                }
+            }
+        },
+
+        getRoleTo() {
+            if (this.rolesFromSelected.length <=0)
+                return;
+
+            this.rolesTo = [];
+
+            let max = this.rolesFromSelected[0].level;
+            for (let i = 0; i < this.rolesFromSelected.length; i++) {
+                if (parseInt(this.rolesFromSelected[i].level) > parseInt(max))
+                    max = this.rolesFromSelected[i].level;            
+            }
+            for (let i = 0; i < this.roles.length; i++) {
+                if (parseInt(this.roles[i].level) >= parseInt(max))
+                    this.rolesTo.push(this.roles[i]);
+            }
+        },
+
+        tranformerRoleSelected(rolesId) {
+            let rolesSelected = [];
+            for (let i = 0; i < rolesId.length; i++) {
+                for(let j = 0; j < this.roles.length; j++) {
+                    if (((rolesId[i]) === (this.roles[j]._id))) {
+                        rolesSelected.push({name: this.roles[j].name, level: this.roles[j].level, _id: this.roles[j]._id});
+                    }
+                }
+            }
+            return rolesSelected;
+        },
+    }
+})
+</script>
