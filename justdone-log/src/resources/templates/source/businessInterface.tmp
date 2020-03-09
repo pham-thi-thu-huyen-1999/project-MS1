@@ -1,0 +1,9 @@
+import IBaseBusiness from './base/IBaseBusiness';
+import {pascalName} from '../../model/{camelName}/{pascalName}';
+
+interface I{pascalName}Business extends IBaseBusiness<{pascalName}> {
+    get{pascalName}s: (name?: string, page?: number, limit?: number) => Promise<{pascalName}[]>;
+    count{pascalName}s: (name?: string) => Promise<number>;
+}
+
+export default I{pascalName}Business;

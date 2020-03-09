@@ -1,0 +1,79 @@
+import {pascalName} from '../model/{camelName}/{pascalName}';
+import {pascalName}Create from '../model/{camelName}/{pascalName}Create'; // eslint-disable-line
+import {pascalName}Update from '../model/{camelName}/{pascalName}Update'; // eslint-disable-line
+import I{pascalName}Business from './interfaces/I{pascalName}Business'; // eslint-disable-line
+import {pascalName}Repository from '../repository/{pascalName}Repository';
+import {ErrorCommon} from '../model/common/Error';
+
+class {pascalName}Business implements I{pascalName}Business {
+    private {camelName}Repository: {pascalName}Repository;
+
+    constructor() {
+        this.{camelName}Repository = new {pascalName}Repository();
+    }
+
+    async get{pascalName}s(name?: string, page?: number, limit?: number): Promise<{pascalName}[]> {
+        let param = {
+            query: <any>{}
+        };
+        if (name)
+            param.query.name = new RegExp(name, 'i');
+
+        let {camelName}s = await this.{camelName}Repository.find(param, {name: 1}, page, limit);
+        return {pascalName}.parseArray({camelName}s);
+    }
+
+    async count{pascalName}s(name?: string): Promise<number> {
+        let param = {
+            query: <any>{}
+        };
+        if (name)
+            param.query.name = new RegExp(name, 'i');
+
+        return await this.{camelName}Repository.getCount(param);
+    }
+
+    async get(_id: string): Promise<{pascalName} | null> {
+        if (!_id)
+            return null;
+
+        let {camelName} = await this.{camelName}Repository.get(_id);
+        return {camelName} && new {pascalName}({camelName});
+    }
+
+    async create(data: any): Promise<{pascalName}> {
+        let {camelName};
+        let dataCreate = new {pascalName}Create(data);
+
+        if (validateName(dataCreate.name))
+            {camelName} = await this.{camelName}Repository.create(dataCreate);
+
+        return {camelName} && new {pascalName}({camelName});
+    }
+
+    async update(_id: string, data: any): Promise<{pascalName} | null> {
+        let {camelName};
+        let dataUpdate = new RoleUpdate(data);
+
+        if (validateName(dataUpdate.name))
+            {camelName} = await this.{camelName}Repository.findOneAndUpdate({_id}, dataUpdate);
+
+        return {camelName} && new {pascalName}({camelName});
+    }
+
+    async delete(_id: string): Promise<boolean> {
+        return await this.{camelName}Repository.delete(_id);
+    }
+}
+
+function validateName(name: string): boolean {
+    if (!name)
+        throw new ErrorCommon(105, 'Name');
+    else if (name.trim().length < 4)
+        throw new ErrorCommon(201, 'name', 4);
+
+    return true;
+}
+
+Object.seal({pascalName}Business);
+export default {pascalName}Business;

@@ -1,0 +1,46 @@
+import BaseController from './base/BaseController';
+import I{pascalName}Business from '../app/business/interfaces/I{pascalName}Business';
+import BusinessLoader from '../system/BusinessLoader';
+import Authenticator from '../system/Authenticator';
+
+class {pascalName}Controller extends BaseController {
+    private {camelName}Business: I{pascalName}Business = BusinessLoader.{camelName}Business;
+
+    constructor() {
+        super();
+
+        this.get('/list', this.validatePagination(), this.get{pascalName}s.bind(this));
+        this.get('/count', this.count{pascalName}s.bind(this));
+        this.get('/:_id', this.get{pascalName}ById.bind(this));
+        this.post('/', Authenticator.isAuthenticated, this.create{pascalName}.bind(this));
+        this.put('/:_id', Authenticator.isAuthenticated, this.update{pascalName}.bind(this));
+        this.delete('/:_id', Authenticator.checkRoles('Administrator'), this.delete{pascalName}.bind(this));
+    }
+
+    async get{pascalName}s(req): Promise<any> {
+        return await this.{camelName}Business.get{pascalName}s(req.query.name, req.query.page, req.query.limit);
+    }
+
+    async count{pascalName}s(req): Promise<any> {
+        return await this.{camelName}Business.count{pascalName}s(req.query.name);
+    }
+
+    async get{pascalName}ById(req): Promise<any> {
+        return await this.{camelName}Business.get(req.params._id);
+    }
+
+    async create{pascalName}(req): Promise<any> {
+        return await this.{camelName}Business.create(req.body);
+    }
+
+    async update{pascalName}(req): Promise<any> {
+        return await this.{camelName}Business.update(req.params._id, req.body);
+    }
+
+    async delete{pascalName}(req): Promise<any> {
+        return await this.{camelName}Business.delete(req.params._id);
+    }
+}
+
+Object.seal({pascalName}Controller);
+export default {pascalName}Controller;
