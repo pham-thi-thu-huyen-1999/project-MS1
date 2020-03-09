@@ -1,0 +1,72 @@
+.magic-link{
+    background-color: #f0f2f5;
+    height: 100vh;
+    .img-logo{
+        margin-top: 81px;
+        margin-bottom: 58px;
+    }
+    .bg-container{
+        padding: 90px;
+        max-width: 882px;
+        margin: auto;
+        background: url('~/assets/images/bg-magic.png') no-repeat;
+        background-size: cover;
+    }
+    .row-white{
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    .box-upload{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .txt-upload{
+            color: #262c39;
+            font-family: $font-second;
+            font-size: 16px;
+            margin: 10px 0 0;
+            >label{
+                color: #3470fb;
+            }
+        }
+    }
+    .box-info{
+        background-color: #3470fb;
+        padding: 64px 44px;
+        >img{
+            width: 100%;
+        }
+        .box-title{
+            color: rgba(255, 255, 255, 0.9);
+            font-family: $font-second;
+            font-size: 26px;
+            margin-top: 43px;
+        }
+        .box-txt{
+            color: rgba(255, 255, 255, 0.8);
+            font-family: $font-primary;
+            font-size: 15px;
+            margin: 4px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .magic-link {
+        .box-info{
+            padding: 35px 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 567px){
+    .magic-link {
+        .bg-container{
+            padding: 60px 50px;
+        }
+        .box-upload{
+            min-height: 300px;
+        }
+    }
+}

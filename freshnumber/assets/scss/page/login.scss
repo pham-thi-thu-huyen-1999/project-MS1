@@ -1,0 +1,105 @@
+.form-container{
+    background-color: $color-seventh;
+    height: 100vh;
+    overflow-y: auto;
+    .form-box{
+        background-color: $color-primary;
+        max-width: 400px;
+        margin: 96px auto 48px;
+        padding:32px 48px 48px 48px;
+        @include border-radius(5px);
+        .form-title{
+            font-family: $font-second;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                max-width: 260px;
+            }
+        }
+        .form-description{
+            font-family: $font-second;
+            font-size: $font-size-bigger;
+            font-weight: 500;
+            line-height: 1;
+            text-align: center;
+            color: $color-second;
+            margin-bottom: 25px;
+        }
+        .form-group{
+            position: relative;
+        }
+        .forgot-password{
+            display: inline-block;
+            // text-align: right;
+            // color: $color-second;
+            // font-size: $font-size-normal;
+            float: right;
+            // margin-top: 15px;
+        }
+        .icon-war{
+            top:44px;
+            &:before{
+                left: 0.5px;
+            }
+        }
+    }
+    &.signup{
+        .form-box{
+            max-width: 460px;
+            &.information{
+                max-width: 670px;
+                padding: 65px 40px 90px;
+                .form-heading{
+                    margin-bottom: 20px;
+                }
+                .form-description{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .form-title{
+            font-family: $font-fifth;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: $color-second;
+        }
+        .form-heading{
+            color: $color-second;
+            font-family: $font-fourth;
+            font-size: 22px;
+            line-height: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .form-description{
+            font-family: $font-primary;
+            font-size: $font-size-normal;
+            line-height: 16px;
+            text-align: center;
+            color: #888b94;
+            max-width: 492px;
+            margin: 0 auto 25px;
+        }
+        .form-paragraph{
+            text-align: center;
+            color: #353942;
+            font-size: $font-size-normal;
+            margin-top: 15px;
+            &:last-child{
+                margin-bottom: 0;
+                margin-top: 56px;
+            }
+            .link{
+                color: $color-second;
+            }
+        }
+        .icon-war, .icon-success{
+            top:48px;
+            &:before{
+                left: 0.5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.theme-white{
+    //----Color
+    $color-primary: $white;
+    $color-second: $blue;
+    $color-third: $gray-darker;
+    $color-fourth: $blue-darker;
+    $color-fifth: $green;
+    $color-sixth: $gray;
+    $color-seventh: $gray-light;
+    $color-eighth: $black-light;
+    $color-ninth: $blue-light;
+    $color-tenth: $blue-dark;
+    $color-eleventh: $red;
+    $color-twelfth: $green-darker;
+    //----Font
+    $font-primary: 'CircularStd-Book';
+    $font-second: 'CircularStd-Medium';
+    $font-third: 'CircularStd-Bold';
+    $font-fourth: 'CircularStd-Black';
+    $font-fifth: 'MarkPro-Bold';
+    $font-sixth: 'ProximaNova-Regular';
+    $font-seventh: 'ProximaNova-Semibold';
+
+    @import './general/general.scss';
+    @import './general/header.scss';
+    @import './page/dashboard.scss';
+    @import './page/data-report.scss';
+    @import './page/transaction.scss';
+    @import './page/team-management.scss';
+    @import './page/business-detail.scss';
+    @import './page/login.scss';
+    @import './page/setting.scss';
+    @import './page/profile.scss';
+    @import './page/table.scss';
+    @import './page/message.scss';
+    @import './page/file-management.scss';
+    @import './page/magic-link.scss';
+    @import './components/box-list.scss';
+    @import './components/box-right.scss';
+    @import './components/box-left.scss';
+    @import './components/dropdown-filter.scss';
+    @import './components/box-popup.scss';
+    @import './components/connect-bank.scss';
+    @import './components/loading.scss';
+    @import './components/success-notify.scss';
+    @import './components/wdtloading.scss';
+    @import './components/progress-bar.scss';
+}

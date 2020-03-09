@@ -1,0 +1,216 @@
+
+// Import Font
+@font-face {
+    font-family: 'CircularStd-Book';
+    src: url('/assets/fonts/CircularStd-Book/CircularStd-Book.eot');
+    src: url('/assets/fonts/CircularStd-Book/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/CircularStd-Book/CircularStd-Book.woff2') format('woff2'), url('/assets/fonts/CircularStd-Book/CircularStd-Book.woff') format('woff'), url('/assets/fonts/CircularStd-Book/CircularStd-Book.ttf') format('truetype'), url('/assets/fonts/CircularStd-Book/CircularStd-Book.svg#svgFontName') format('svg');
+    font-weight: normal!important;
+}
+
+@font-face {
+    font-family: 'CircularStd-Medium';
+    src: url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.eot');
+    src: url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.woff2') format('woff2'), url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.woff') format('woff'), url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.ttf') format('truetype'), url('/assets/fonts/CircularStd-Medium/CircularStd-Medium.svg#svgFontName') format('svg');
+    font-weight: normal!important;
+}
+
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.eot');
+    src: url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.woff2') format('woff2'), url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.woff') format('woff'), url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.ttf') format('truetype'), url('/assets/fonts/CircularStd-Bold/CircularStd-Bold.svg#svgFontName') format('svg');
+    font-weight: bold!important;
+}
+
+@font-face {
+    font-family: 'CircularStd-Black';
+    src: url('/assets/fonts/CircularStd-Black/CircularStd-Black.eot');
+    src: url('/assets/fonts/CircularStd-Black/CircularStd-Black.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/CircularStd-Black/CircularStd-Black.woff2') format('woff2'), url('/assets/fonts/CircularStd-Black/CircularStd-Black.woff') format('woff'), url('/assets/fonts/CircularStd-Black/CircularStd-Black.ttf') format('truetype'), url('/assets/fonts/CircularStd-Black/CircularStd-Black.svg#svgFontName') format('svg');
+    font-weight: bold!important;
+}
+
+@font-face {
+    font-family: 'MarkPro-Bold';
+    src: url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.eot');
+    src: url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.woff2') format('woff2'), url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.woff') format('woff'), url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.ttf') format('truetype'), url('/assets/fonts/MarkPro-Bold/MarkPro-Bold.svg#svgFontName') format('svg');
+    font-weight: bold!important;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.eot');
+    src: url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.woff2') format('woff2'), url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.woff') format('woff'), url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.ttf') format('truetype'), url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'), url('/assets/fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot');
+    src: url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff2') format('woff2'), url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff') format('woff'), url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf') format('truetype'), url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg'), url('/assets/fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Flaticon";
+    src: url("/assets/fonts/Flaticon/Flaticon.eot");
+    src: url("/assets/fonts/Flaticon/Flaticon.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Flaticon/Flaticon.woff") format("woff"), url("/assets/fonts/Flaticon/Flaticon.ttf") format("truetype"), url("/assets/fonts/Flaticon/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'SignericaFat';
+  src: url('/assets/fonts/SignericaFat/SignericaFat.eot');
+  src: url('/assets/fonts/SignericaFat/SignericaFat.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/SignericaFat/SignericaFat.woff2') format('woff2'), url('/assets/fonts/SignericaFat/SignericaFat.woff') format('woff'), url('/assets/fonts/SignericaFat/SignericaFat.ttf') format('truetype'), url('/assets/fonts/SignericaFat/SignericaFat.svg#svgFontName') format('svg');
+  font-weight: normal!important;
+}
+
+@font-face {
+    font-family: 'Icomoon';
+    src:  url('/assets/fonts/Icomoon/icomoon.eot?pxgg4g');
+    src:  url('/assets/fonts/Icomoon/icomoon.eot?pxgg4g#iefix') format('embedded-opentype'), url('/assets/fonts/Icomoon/icomoon.ttf?pxgg4g') format('truetype'), url('/assets/fonts/Icomoon/icomoon.woff?pxgg4g') format('woff'), url('/assets/fonts/Icomoon/icomoon.svg?pxgg4g#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-bank:before {
+    content: "\e900";
+}
+.icon-client:before {
+content: "\e901";
+}
+.icon-business:before {
+    content: "\e902";
+}
+.icon-dashboard:before {
+    content: "\e903";
+}
+.icon-transaction:before {
+    content: "\e904";
+}
+.icon-data-report:before {
+    content: "\e905";
+}
+.icon-search:before {
+    content: "\e906";
+}
+.icon-settings:before {
+    content: "\e907";
+}
+.icon-sort:before {
+    content: "\e908";
+}
+.icon-team-management:before {
+    content: "\e909";
+}
+.icon-bank-min:before {
+    content: "\e90a";
+}
+.icon-arr-box:before {
+    content: "\e90b";
+}
+.icon-date:before {
+    content: "\e90c";
+}
+.icon-logout:before {
+    content: "\e90d";
+}
+.icon-message:before {
+    content: "\e90e";
+}
+.icon-file-management:before {
+    content: "\e90f";
+}
+.icon-new-folder:before {
+    content: "\e910";
+}
+.icon-client-management:before {
+    content: "\e911";
+}
+.icon-financial{
+    -webkit-mask: url("~/assets/images/financial-icon.svg") no-repeat 50% 50%;
+    mask: url("~/assets/images/financial-icon.svg") no-repeat 50% 50%;
+}
+
+// Color 
+$black: #000;
+$black-light: #0f0f0f;
+$white: #fff;
+$red: #ff5151;
+$gray-light: #f0f2f5;
+$gray: #9fa3b1;
+$gray-dark: #5c6069;
+$gray-darker: #262c39;
+$blue-light: #DEEEF9; 
+$blue: #0096d0;
+$blue-dark: #107caf;
+$blue-darker: #24396b;
+$green: #05ba23;
+$green-darker: #00caa3;
+$yellow: #fdd130;
+
+//Theme second
+$second-green: #00C9A3;
+$second-green-dark: #058c72;
+$second-red: #FF5050;
+
+// Font
+$font-size-smallest: 7px;
+$font-size-smaller: 9px;
+$font-size-small: 10px;
+$font-size-normal: 12px;
+$font-size-primary: 13px;
+$font-size-big: 14px;
+$font-size-bigger: 15px;
+$font-size-biggest: 32px;
+
+// h1 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0
+}
+.pdr-5{
+    padding-right: 5px !important;
+}
+.pdl-5{
+    padding-left: 5px !important;
+}
+.pdr-15 {
+    padding-right: 15px !important;
+}
+.mt-0{
+    margin-top: 0 !important;
+}
+.mr-15{
+    margin-right: 15px !important;
+}
+.min-180{
+    min-width: 180px;
+}
+.pt-10{
+    padding-top: 10px !important;
+}
+.hidden {
+    display: none;
+}
+.mt-20 {
+    margin-top: 20px!important;
+}
+.mb-15 {
+    margin-bottom: 15px!important;
+}
