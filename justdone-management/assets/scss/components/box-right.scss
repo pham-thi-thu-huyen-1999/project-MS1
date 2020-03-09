@@ -1,0 +1,176 @@
+.box-right{
+    background-color: $color-primary;
+    padding: 18px 15px;
+    @include border-radius(3px);
+    &:first-child{
+
+    }
+    .list-box{
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    .section-title{
+        margin-bottom: 0;
+    }
+    .list-item{
+        list-style: none;
+        padding: 8px 0px;
+        border-bottom: 1px dotted #d5d5d5;
+        &:last-child{
+            border-bottom: 0;
+        }
+    }
+    .list-link{
+        font-size: $font-size-small;
+        max-width: 83%;
+        white-space: pre-line;
+        display: inline-block;
+        word-break: break-word;
+    }
+    .list-time{
+        font-size: $font-size-smallest;
+        color: rgba($color-third, .6);
+        float: right;
+        position: relative;
+        top: 5px;
+    }
+    .history-logs{
+        position: relative;
+        display: table;
+        width: 100%;
+        // padding-right: 8px;
+        padding-top: 5px;
+        height: 375px;
+        .list-box-title{
+            font-size: $font-size-small;
+            color: #262c39;
+            font-family: $font-second;
+        }
+        .box-right-section{
+            max-height: 330px;
+            overflow-y: auto;
+            margin: 20px 0px;
+            &::-webkit-scrollbar-track
+            {
+                -webkit-box-shadow: inset 0 0 6px #fff;
+                background-color: #ffffff;
+            }
+            &::-webkit-scrollbar
+            {
+                width: 2px;
+                background-color: #ffffff;
+            }
+            
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: rgba(216, 216, 216, 0.62);
+                border-radius: 10px;
+                border: 1px solid rgba(216, 216, 216, 0.62);
+            }
+        }
+        .list-box{
+            position: relative;
+            padding-right: 10px;
+            &::after{
+                content: '';
+                width: 2px;
+                position: absolute;
+                top: 15px;
+                bottom: 15px;
+                left: 1px;
+                z-index: 1;
+                background: #ebe8e8;
+                opacity: 0.5;
+            }
+        }
+        .list-item{
+            border-bottom: 0;
+            position: relative;
+            &::after{
+                content: '';
+                width: 5px;
+                height: 5px;
+                background: #C5C5C5;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                border-radius: 50%;
+                position: absolute;
+                left: 0px;
+                z-index: 2;
+                top:15px;
+            }
+        }
+        .list-link{
+            padding-left: 15px;
+            .list-link{
+                padding-left: 0px;
+                display: inline;
+            }
+        }
+    }
+    &.box-start-list{
+        .section-title{
+            margin-bottom: 20px;
+        }
+        .list-item{
+            .fa-star-o{
+                color: $color-second;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: relative;
+                top:1px;
+                opacity: 0;
+                cursor: pointer;
+                @include transition(all, 0.3s, ease-in);
+                &:hover{
+                    opacity: 1;
+                }
+                &.bookmark{
+                    &::before{
+                        content: "\f005";
+                    }
+                }
+            }
+        }
+        .start-none{
+            text-align: center;
+            padding: 20px;
+        }
+        .start-none-text{
+            font-size: $font-size-small;
+            margin-top: 15px;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    .box-right{
+        &.box-history-logs{
+            width: 170px;
+        }
+        .history-logs {
+            .list-link{
+                max-width: 75%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px){
+    .box-right{
+        &.box-history-logs{
+            width: 250px;
+        }
+        .history-logs {
+            .list-link{
+                max-width: 82%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .box-right{
+        &.box-history-logs{
+            margin-top: 20px !important;
+        }
+    }
+}

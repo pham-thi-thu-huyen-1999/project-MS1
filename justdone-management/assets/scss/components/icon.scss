@@ -1,0 +1,40 @@
+.icon {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat ;
+
+    &.size-20 {
+        width: 20px;
+        height: 20px;
+    }
+    &.disabled {
+        opacity: 0.3;
+    }
+    &:not(:disabled) {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &.modify {
+        background-image: url('~assets/images/modify.png');
+    }
+
+    &.remove {
+        background-image: url('~assets/images/remove.png');
+    }
+
+    &.add {
+        background-image: url('~assets/images/add.png');
+    }
+
+    &.apply {
+        background-image: url('~assets/images/apply.png');
+    }
+
+    &.cancel {
+        background-image: url('~assets/images/cancel.png');
+    }
+}

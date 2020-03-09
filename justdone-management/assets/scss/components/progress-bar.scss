@@ -1,0 +1,103 @@
+.box-progress{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.21);
+    border-radius: 4px;
+    border: 1px solid #979797;
+    background-color: #ffffff;
+    max-width: 456px;
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 23px;
+    display: none;
+    &.show{
+        display: block;
+    }
+    &.collapsed{
+        .box-head{
+            .box-title{
+                font-size: 16px;
+                .dots{
+                    display: inline;
+                }
+            }
+        }
+    }
+    .box-head {
+        background-color: #262c39;
+        padding: 10px 20px;
+        .box-title{
+            color: #ffffff;
+            font-size: 20px;
+            font-family: $font-second;
+            display: inline-block;
+            height: 24px;
+            padding: 2px 0;
+            .dots{
+                display: none;
+            }
+        }
+        .btn-close{
+            position: unset;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            margin-left: 31px;
+            vertical-align: middle;
+            img{
+                position: unset;
+                transform: none;
+            }
+        }
+        .btn-collapse{
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            color: #fff;
+            font-size: 30px;
+            line-height: 0;
+            outline: none;
+            vertical-align: middle;
+            cursor: pointer;
+            &[aria-expanded=false]{
+                transform: rotate(180deg);
+            }
+        }
+        .group-btn{
+            float: right;
+            margin-top: 1px;
+            &:has(.btn-collapse[aria-expanded=false]){
+                background-color: #fff;
+            }
+        }
+    }
+    .box-container{
+        border-top: 1px solid #979797;
+        padding: 20px 37px 12px;
+    }
+}
+
+.progress-upload{
+    margin-bottom: 24px;
+    .progress-info{
+        margin-bottom: 12px;
+        .progress-title{
+            color: rgba(#000000, 0.4);
+            font-size: 14px;
+            display: inline-block;
+        }
+        .progress-control{
+            float: right;
+        }
+    }
+    .progress{
+        height: 4px;
+        background-color: #e9e9e9;
+        .process-bar{
+            background-color: #2d57ff;
+            border-radius: 4px;
+            &.completed{
+                background-color: #00cfad;
+            }
+        }
+    }
+}

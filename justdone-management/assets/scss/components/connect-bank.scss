@@ -1,0 +1,368 @@
+.connect-bank{
+    @include border-radius(3px);
+    background-color: $white;
+    padding: 60px 24px;
+    min-height: 669px;
+    text-align: center;
+    .connect-step1, .connect-step2, .connect-step3, .connect-step4{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .step-title {
+        font-size: $font-size-normal;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $gray-darker;
+    }
+    .dropdown-toggle{
+        &::after{
+            display: none;
+        }
+    }
+    .fa {
+        position: absolute;
+        right: 17px;
+        font-size: 13px;
+        opacity: .8;
+        color: #464955;
+        &.fa-angle-up {
+            top: 10px;
+        }
+        &.fa-angle-down {
+            bottom: 10px;
+        }
+    }
+    .form-input{
+        font-size: 12px;
+    }
+    .dropdown-menu{
+        max-width: 100%;
+        .dropdown-menu-link{
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 12px;
+        }
+    }
+    .box-border{
+        @include border-radius(3px);
+        border: 1px solid #f2f2f2;
+        height: 40px;
+        padding-top: 10px;
+        .bank-img{
+            margin-left: 30px;
+            position: relative;
+            top:-2px;
+        }
+        .bank-name{
+            font-size: $font-size-primary;
+            margin-left: 15px;
+        }
+        .btn-other-bank{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: $font-size-small;
+            color: $color-second;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+    }
+    .form-login{
+        margin-top: 20px;
+    }
+    .connect-step1{
+        .bank-name{
+            position: relative;
+            top: 1px;
+            margin-left: 10px;
+        }
+        .dropdown-menu-link{
+            color: $gray-darker;
+        }
+    }
+    .connect-step3{
+        .acc-name{
+            font-size: 12px;
+        }
+        .acc-value{
+            font-size: 12px;
+            float: right;
+        }
+        .form-input{
+            color: $gray-dark;
+        }
+        .select-account{
+            .acc-value{
+                margin-right: 30px;
+            }
+        }
+    }
+    .es-time{
+        color: #888b94;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .connect-status{
+        font-size: $font-size-normal;
+        font-family: $font-second;
+        color: $color-second;
+        text-transform: uppercase;
+    }
+}
+.connect-bank-small{
+    .connect-bank{
+        min-height: auto;
+        padding: 0;
+        margin-top: 0;
+        .connect-step1, .connect-step2, .connect-step3, .connect-step4{
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .step-title{
+            color: $color-sixth;
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 9px;
+        }
+    }
+}
+.bank-img{
+    width: 18px !important;
+    height: 18px;
+    @include border-radius(50%);
+    border: 1px solid #eee;
+}
+.bank-connection {
+    .bank-list-connect {
+        width: 300px;
+    }
+    .connect {
+        &-item {
+            padding: 15px;
+            background-color: #fff;
+            margin-bottom: 1px;
+            font-size: 12px;
+            cursor: pointer;
+            &.btn {
+                width: 100%;
+                color: $color-second;
+                border: 0;
+                &:hover {
+                    background-color: $color-second;
+                    color: #fff !important;
+                }
+            }
+            &.active {
+                background-color: $color-second;
+                color: #ffffff;
+                .btn-small {
+                    background-color: #fff !important;
+                    color: $color-second;
+                }
+            }
+        }
+        &-tab-item {
+            display: inline-block;
+            font-size: 12px;
+            color: $color-second;
+        }
+        &-bank-logo {
+            position: relative;
+            .icon-status {
+                left: 14px;
+                top: 10px;
+            }
+        }
+        &-bank-number {
+            display: inline-block;
+            padding: 0 10px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: normal;
+        }
+        &-bank-img {
+            width: 22px;;
+            border-radius: 50%;
+            border: 1px solid #d8d8d8;
+            margin-right: 10px;
+            display: inline-block;         
+        }
+        &-bank-name {
+            display: inline-block;
+            text-align: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            vertical-align: middle;
+            line-height: normal;    
+        }
+        &-bank-btn {
+            display: inline-block;
+            width: 48px;       
+        }
+    }
+    .btn-small {
+        font-size: $font-size-smaller;
+        color: #ffffff;
+        min-width: 50px;
+        background-color: $color-second;
+        // background-color: $color-eleventh;
+        padding: 5px 12px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        &.white {
+            color: $color-second;
+            background-color: #f3f7fe;
+        }
+        &.black {
+            background-color: #0f0f10;
+        }
+        &.grey {
+            color: $color-second;
+            background-color: #f3f7fe;
+        }
+        &.disabled {
+            color: #d8d8d8;
+            background-color: #f3f7fe;
+            pointer-events: none;
+        }
+    }
+    .info-client-head{
+        .btn-small{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 4px;
+            @include border-radius(2px);
+            color: #fff;
+            display: inline-block;
+            margin-left: 20px;
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+    }
+    .connect-bank, .transaction-box {
+        width: calc(100vw - 493px);
+        min-height: 425px;
+    }
+    .transaction-name{
+        text-transform: uppercase;
+    }
+    .crunch-status{
+        margin: 0px 20px 0px 0px;
+        color: rgba($color-third, .5);
+        &.red{
+            color: $red;
+        }
+        &.blue{
+            color: $blue-lighter;
+        }
+        &.grey{
+            color: rgb(161, 167, 173);
+        }
+    }
+    .transaction-box {
+        border-radius: 3px;
+        background-color: #ffffff;
+        padding: 13px;
+        margin-bottom: 10px;
+
+        .connect-item {
+            border-radius: 20px;
+            border: 1px solid #f1f1f1;
+            padding: 10px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+    .list-connected {
+        padding: 10px;
+    }
+    .list-connected-box {
+        border: 1px solid #f1f1f1;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        .connect-item {
+            cursor: initial;
+        }        
+        .connect {
+            &-item {
+                width: 100%;
+                padding: 8px 20px;
+                border: 0;
+            }
+            &-bank-name {
+                width: calc(100% -110px);  
+            }
+            &-bank-status {
+                width: 76px;
+                display: inline-block;
+                text-align: right;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: $gray;
+                .fa-circle {
+                    margin-right: 5px;
+                }
+                &.active {
+                    color: $green-darker;
+                }      
+            }
+            &-bank-btn {
+                width: 110px;       
+            }
+        }
+    }
+    .transaction-item {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid #d1d1d1;
+    }
+    .transaction-detail {
+        .row {
+            &::after {
+                border-bottom: 1px solid #d1d1d1;
+                content: '';
+                width: 100%;
+                margin-left: 15px;
+                margin-right: 15px;
+                position: relative;
+                bottom: -10px;
+            }
+        }
+        .box-title {
+            h6, a {
+                display: inline-block;
+            }
+        }
+    }
+    .swimlane {
+        padding: 10px 20px;
+        &::before{
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999;
+            background: #fff;
+            background: -webkit-gradient(linear,left top,left bottom,color-stop(23%,hsl(0, 0%, 100%)),color-stop(49%,hsla(0, 0%, 100%, 0.73)),color-stop(50%,hsla(0, 0%, 100%, 0)),color-stop(80%,hsla(0, 0%, 100%, 0)),color-stop(81%,hsla(0, 0%, 100%, 0.87)));
+            background: linear-gradient(180deg,hsla(0, 0%, 100%, 0.94) 23%,hsla(0, 0%, 100%, 0.78) 49%,hsla(0,0%,100%,0) 50%,hsla(0, 0%, 100%, 0.13) 80%,hsla(0, 0%, 100%, 0.87) 81%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="rgb(191, 255, 255)",endColorstr="rgb(189, 255, 255)",GradientType=0);
+        }
+        ul {
+            li {
+                color: #000;
+            }
+        }
+    }
+}

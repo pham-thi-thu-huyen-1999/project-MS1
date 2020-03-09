@@ -1,0 +1,20 @@
+.btn-import-csv {
+    margin-right: 10px;
+    input[type="file"] {
+        display: none;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-import {
+    background-color: #f2f6fe;
+    border: 1px solid #f2f6fe;
+    padding: 6px 24px;
+    border-radius: 2px;
+
+    &:hover {
+        border: 1px solid #00bc87
+    }
+}

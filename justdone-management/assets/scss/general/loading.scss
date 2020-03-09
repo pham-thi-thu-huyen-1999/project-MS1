@@ -1,0 +1,30 @@
+
+.loading {
+    &::after {
+        content: "";
+        position: fixed;
+        top: calc(50% - 30px);
+        left: calc(50% - 30px);
+        z-index: 999999;
+        border: 2px solid #f3f3f3;
+        border-top: 2px solid transparent;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1.5s linear infinite;
+    }
+
+    &::before {
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        position: fixed;
+        content: "";
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

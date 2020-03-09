@@ -1,0 +1,32 @@
+.upload-request{
+    .tab-pane {
+        &:not(.show) {
+            display: none;
+        }
+    }
+    .list {
+        & thead {
+            background-color: #f2f2f2;
+        }
+
+        .item {
+            .name {
+                font-size: 14px;
+                font-weight: 500;
+                color: #000000;
+            }
+
+            .email {
+                color: #444444;
+            }
+
+            .sent {
+                color: #28af78
+            }
+
+            .expired {
+                color: #ff1616;
+            }
+        }
+    }
+}

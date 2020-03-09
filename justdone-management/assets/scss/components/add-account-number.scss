@@ -1,0 +1,23 @@
+.add-account-number-modal {
+    .btn-account-type {
+        width: 100%;
+        background-color: white;
+        color: $color-second !important;
+        &.active {
+            background-color: $color-second !important;
+            color:  white !important;
+        }
+    }
+    .bank-item {
+        padding: 5px;
+        font-size: 20px;
+    }
+    .bank-img{
+        margin-left: 15px;
+        position: relative;
+    }
+    .bank-name{
+        font-size: $font-size-primary;
+        margin-left: 15px;
+    }
+}

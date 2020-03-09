@@ -1,0 +1,62 @@
+0|1|0|0|10,Asset,
+1|1|0|0|9,Current Asset,
+2|0|0|0|9,Business Account,0
+2|0|0|0|9,B Bank Account,0
+2|0|0|0|9,Payroll Cheque Account,0
+1|1|1|0|9,Total Current Asset,0
+1|1|0|20|9,Non Current Asset,
+2|0|0|0|9,Pooled Asset,
+3|0|0|0|9,Office Furniture – Equipment,0
+3|0|0|0|9,Office Furniture - Equip Cost,0
+3|0|0|0|9,Office Fur - Equip Accum Dpn,0
+2|0|1|0|9,Total Pooled Asset,0
+2|0|0|0|9,Mercedes-Benz,
+3|0|0|0|9,Motor Vehicle,0
+3|0|0|0|9,MV cost,0
+3|0|0|0|9,MV Accum Dpn,0
+2|0|1|0|9,Total Mercedes-Benz,0
+2|0|0|0|9,Borrowing Cost,
+3|0|0|0|9,Borrowing cost accum,0
+2|0|1|0|9,Total Borrowing Cost,0
+1|1|1|0|9,Total Non Current Asset ,0
+0|1|1|0|10,Total Asset,0
+0|1|0|40|10,Liabilities,
+1|1|0|0|9,Current Liabilities,
+2|0|0|0|9,Credit Cards,
+3|0|0|0|9,Master Card ,0
+3|0|0|0|9,VISA Card,0
+2|0|1|0|9,Total Credit Cards,0
+2|0|0|0|9,GST Liabilities,
+3|0|0|0|9,GST Collected,0
+3|0|0|0|9,GST Paid,0
+2|0|1|0|9,Total GST Liabilities,0
+2|0|0|0|9,Payroll Liabilities,
+3|0|0|0|9,PAYG Withholding Payable,0
+3|0|0|0|9,Superannuation Payable ,0
+3|0|0|0|9,PAYG Instalment,0
+2|0|1|0|9,Total Payroll Liabilities,0
+2|0|0|0|9,ATO RBA,
+3|0|0|0|9,ATO ITA,0
+3|0|0|0|9,ATO ICA,0
+2|0|1|0|9,Total ATO RBA,0
+1|1|1|0|9,Total Current Liabilities,0
+1|1|0|20|9,Non Current Liabilities,
+2|0|0|0|9,Other Loan,
+3|0|0|0|9,Business Loan,0
+3|0|0|0|9,Drawings,0
+2|0|1|0|9,Total Other Loan,0
+2|0|0|0|9,MB Financial - Mercedes Benz,
+3|0|0|0|9,HP/CM Repayment,0
+3|0|0|0|9,HP/Chattle Repayment ,0
+3|0|0|0|9,Less Unexpired Interest,0
+2|0|1|0|9,Total MB Financial - Mercedes Benz,0
+1|1|1|0|9,Total Non Current Liabilities ,0
+0|1|1|0|10,Total Liabilities,0
+0|1|0|40|10,Net Asset,0
+0|1|0|40|10,Equity,
+1|0|0|0|9,Settled Sum ,0
+1|0|0|0|9,Shareholders Equity,0
+1|0|0|0|9,Retained Earnings,0
+1|0|0|0|9,Current Earnings,0
+1|0|0|0|9,Historical Balancing Accounts,0
+0|1|1|0|10,Total Equity,0

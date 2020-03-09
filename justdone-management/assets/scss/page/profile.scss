@@ -1,0 +1,50 @@
+.setting-profile{
+    .box-content{
+        padding: 0 15px;
+        max-width: 530px;
+        margin: auto;
+        &.personal-info{
+            padding-top: 34px;
+        }
+        &.change-password{
+            padding-top: 54px;
+        }
+        .wrapper-info{
+            margin-bottom: 36px;
+        }
+        .tiltle-box{
+            color: $color-second;
+            font-family: $font-third, sans-serif;
+            font-size: $font-size-primary;
+        }
+        .img-user{
+            margin: 20px 0 12px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .user-name{
+            color: #9fa3b1;
+            font-family: $font-second;
+            font-size: $font-size-small;
+            line-height: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .form-btn{
+            &.small{
+                background-color: #f0f2f5;
+                border-color: #f0f2f5;
+                color: $color-second;
+                width: 120px;
+                margin-bottom: 18px;
+                &:hover{
+                    background-color: $color-second !important;
+                    border-color: $color-second;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

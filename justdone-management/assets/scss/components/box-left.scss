@@ -1,0 +1,70 @@
+.box-left{
+    background-color: $white;
+    @include border-radius(3px);
+    .page-menu{
+        @include border-radius(3px);
+        .page-menu-item{
+            // border-bottom: 3px solid #fff;
+            // border-top: 3px solid #fff;
+            padding: 10px 0px;
+            &::after{
+                content: '';
+                height: 1px;
+                border-bottom: 1px solid #f0f2f5;
+                width: 100%;
+                display: block;
+                position: relative;
+                top:9.5px;
+                // left: -10px;
+            }
+            .page-menu-link{
+                padding: 8px 24px;
+                display: block;
+                color: #262c39;
+                font-size: 13px;
+                border-left: 3px solid #fff;
+                border-bottom: 3px solid #fff;
+                border-top: 3px solid #fff;
+                &:hover{
+                    color: $color-second;
+                }
+            }
+            &.active{
+                .page-menu-link{
+                    border-left: 3px solid $color-second;
+                    border-bottom-left-radius: 2px;
+                    border-top-left-radius: 2px;
+                }
+            }
+        }
+    }
+
+}
+.select-financial{
+    padding: 10px 24px;
+    .dropdown-menu{
+        width: 80px;
+        margin-top: 10px;
+        text-align: center;
+        letter-spacing: 1px;
+        .dropdown-menu-link{
+            font-size: $font-size-normal;
+        }
+    }
+    .select-title{
+        color: #262c39;
+        font-family: $font-second;
+        font-size: $font-size-primary;
+        text-transform: uppercase;
+    }
+    .dropdown-toggle{
+        color: #303742;
+        font-size: 12px;
+        margin-top: 10px;
+        display: block;
+        letter-spacing: 1px;
+        &::after{
+            display: none;
+        }
+    }
+}
