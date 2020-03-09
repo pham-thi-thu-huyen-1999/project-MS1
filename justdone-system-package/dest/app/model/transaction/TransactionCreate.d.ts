@@ -1,0 +1,32 @@
+import ITransaction from './interfaces/ITransaction';
+import { BankType, CrunchType } from '../common/CommonType';
+declare class TransactionCreate {
+    amount: any;
+    accountId: number;
+    baseType: string;
+    bankId: number;
+    categoryType: string;
+    categoryId: number;
+    category: string;
+    categorySource: string;
+    description: any;
+    date: Date;
+    highLevelCategoryId: number;
+    isManual: boolean;
+    isWarningDuplicate?: boolean;
+    duplicateId?: string;
+    merchant: any;
+    postDate?: Date;
+    runningBalance: any;
+    status: string;
+    transactionId: number;
+    userId: string;
+    type: BankType;
+    typeCrunch: CrunchType;
+    month: number;
+    year: number;
+    index?: number;
+    manualTransaction?: boolean;
+    constructor(model: ITransaction);
+}
+export default TransactionCreate;

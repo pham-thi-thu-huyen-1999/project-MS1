@@ -1,0 +1,28 @@
+import IGroupExpense from "./interfaces/IGroupExpense"; // eslint-disable-line
+
+class GroupExpenseCreate {
+    userId: string;
+    parent: string;
+    code: number;
+    name: string;
+    order: number;
+    searchTerm: string;
+    coas: any[];
+
+    constructor(model: IGroupExpense) {
+        if (!model)
+            return;
+
+        this.userId = model.userId;
+        this.parent = model.parent;
+        this.code = model.code;
+        this.name = model.name;
+        if (model.order)
+            this.order = model.order;
+        this.searchTerm = model.searchTerm;
+        this.coas = model.coas;
+    }
+}
+
+Object.seal(GroupExpenseCreate);
+export default GroupExpenseCreate;
