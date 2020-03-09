@@ -1,0 +1,47 @@
+.form-container{
+    background-color: $color-seventh;
+    height: 100vh;
+    overflow-y: auto;
+    .form-box{
+        background-color: $color-primary;
+        max-width: 368px;
+        margin: 96px auto 48px;
+        padding:32px 48px 48px 48px;
+        @include border-radius(5px);
+        .form-title{
+            font-family: $font-second;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+            img{
+                max-width: 260px;
+            }
+        }
+        .form-description{
+            font-family: $font-second;
+            font-size: $font-size-bigger;
+            font-weight: 500;
+            line-height: 1;
+            text-align: center;
+            color: $color-second;
+            margin-bottom: 25px;
+        }
+        .form-group{
+            position: relative;
+        }
+        .forgot-password{
+            display: inline-block;
+            // text-align: right;
+            // color: $color-second;
+            // font-size: $font-size-normal;
+            float: right;
+            // margin-top: 15px;
+        }
+        .icon-war{
+            top:44px;
+            &:before{
+                left: 0.5px;
+            }
+        }
+    }
+}

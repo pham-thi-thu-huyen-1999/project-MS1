@@ -1,0 +1,29 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:8.11.4
+
+pipelines:
+  custom: # Pipelines that are triggered manually
+    production-deployment:
+      - step:
+          deployment: production
+          script:
+            - ssh $PRODUCTION_USER@$PRODUCTION_ADDR "cd /var/www/$BITBUCKET_REPO_SLUG; git pull; npm install; npm run build-production;pm2 restart $BITBUCKET_REPO_SLUG; exit;"
+  branches:
+    master:
+      - step:
+          name: Test to deployment
+          deployment: test
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build
+      - step:
+          name: Deploy to staging
+          deployment: staging
+          script:
+            - ssh $STAGING_USER@$STAGING_ADDR "cd /var/www/$BITBUCKET_REPO_SLUG; git pull; npm install; npm run build-staging;pm2 restart $BITBUCKET_REPO_SLUG; exit;"

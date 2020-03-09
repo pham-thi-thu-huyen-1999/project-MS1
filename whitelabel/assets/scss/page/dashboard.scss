@@ -1,0 +1,433 @@
+// .dashboard{
+//     .delete-assign{
+//         right: -4px;
+//     }
+//     .box-item{
+//         max-height: 290px;
+//         overflow-y: auto;
+//         &.not-cruncher{
+//             min-height: 170px;
+//         }
+//     }
+//     .box-static{
+//         height: 217px;
+//     }
+//     .box-custom{
+//         .col-label{
+//             margin-left: -15px;
+//         }
+//         .set-height{
+//             height: 110px;
+//             margin-top: 10px;
+//         }
+//     }
+// }
+// .set-height{
+//     .no-data{
+//         padding: 0 15px;
+//         img{
+//             margin: 0 0 15px;
+//         }
+//         .text-note{
+//             margin-bottom: 0;
+//         }
+//     }
+// }
+
+.dashboard{
+    .box-white{
+        background-color: #fff;
+        @include border-radius(5px);
+        border: 1px solid #dcdcdc;
+        height: 100%;
+        .row-title{
+            padding: 14px 0 10px;
+            border-bottom: 1px dashed rgba(#d7d7d7, 0.52);
+        }
+        .btn-view{
+            color: #276cf2;
+            font-size: 8px;
+            text-transform: uppercase;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+        }
+        .list-view{
+            max-height: 170px;
+            overflow-y: auto;
+            &::-webkit-scrollbar-track
+            {
+                -webkit-box-shadow: inset 0 0 6px #fff;
+                background-color: #ffffff;
+            }
+            &::-webkit-scrollbar
+            {
+                width: 2px;
+                background-color: #ffffff;
+            }
+            
+            &::-webkit-scrollbar-thumb
+            {
+                background-color: rgba(216, 216, 216, 0.62);
+                border-radius: 10px;
+                border: 1px solid rgba(216, 216, 216, 0.62);
+            }
+            .row{
+                div[class^="col-"] {
+                    &:last-child{
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+        .wrapper-list{
+            padding: 0 17px 15px;
+        }
+    }
+    .sub-title{
+        border-bottom: 1px solid #d7d7d7;
+        padding: 10px 17px;
+        .logo{
+            margin-right: 5px;
+        }
+        .name{
+            display: inline-block;
+            vertical-align: sub;
+            font-family: $font-third;
+            font-size: $font-size-bigger;
+            font-weight: 700;
+            color: $gray-dark;
+        }
+        .date{
+            color: #9b9b9b;
+            margin-top: 2px;
+        }
+    }
+    
+    .row-10{
+        margin: 0 -10px;
+        >[class*=col-]{
+            padding: 0 10px 20px;
+        }
+    }
+    .wrapper-list{
+        padding: 0 17px;
+        .title-list{
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: normal;
+            color: rgba(#262c3a, 0.5);
+            span{
+                padding-right: 20px;
+            }
+        }
+    }
+    
+    .item-list{
+        border-bottom: 1px dashed rgba(#d7d7d7, 0.52);
+        padding: 10px 0;
+        color: #4a4a4a;
+        &:last-child{
+            border-bottom: none;
+        }
+        &:nth-child(3n+1){
+            .circle-text{
+                background-color: #276cf2;
+            }
+        }
+        &:nth-child(3n+2){
+            .circle-text{
+                background-color: #00a989;
+            }
+        }
+        .circle-text{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            color: #ffffff;
+            background-color: #909090;
+            font-family: $font-sixth;
+            font-size: 8px;
+            font-weight: normal;
+            text-transform: uppercase;
+            border-radius: 100%;
+            text-align: center;
+            padding: 5px 0;
+            margin-top: 3px;
+            margin-right: 5px;
+            &.grey{
+                background-color: #6a6a6b;
+            }
+            &.black{
+                background-color: #262c39;
+            }
+            &.blue{
+                background-color: #276cf2;
+            }
+        }
+        .name{
+            font-size: 12px;
+            margin-bottom: 3px;
+            color: $gray-dark;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .email{
+            font-size: 8px;
+            color: rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .label{
+            display: inline-block;
+            min-width: 54px;
+            padding-left: 5px;
+            padding-right: 5px;
+            // height: 18px;
+            @include border-radius(3px);
+            background-color: rgba(34, 97, 240, 0.06);
+            font-size: 7px;
+            line-height: 18px;
+            text-align: center;
+            color: $gray-dark;
+        }
+        .supervisor{
+            font-family: $font-seventh;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .btn{
+            font-size: 7px;
+            width: 54px;
+            height: 18px;
+            padding: 4px 10px;
+            text-transform: uppercase;
+        }
+        .client{
+            color: #4a4a4a;
+            font-family: $font-third;
+            font-size: 18px;
+        }
+        .time{
+            font-size: 8px;
+            color: #989898;
+        }
+        .img-oval{
+            height: 20px;
+            width: 20px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+    
+    //Box Server Status
+    .title-status{
+        margin-top: -17px;
+        color: #898c93;
+        font-size: 8px;
+        text-align: right;
+        .fa-circle{
+            font-size: 7px;
+            margin-left: 3px;
+            color: #00cfad;
+            &.working{
+                color: #00cfad; 
+            }
+            &.warning{
+                color: #f5a623;
+            }
+            &.not-working{
+                color: #ff5151;
+            }
+        }
+    }
+    .row-client{
+        font-family: $font-second;
+        text-align: center;
+        color: #5c6069;
+        h4{
+            font-size: 13px;
+            margin-top: 25px;
+            &.cancel{
+                color: #ff5151;
+            }
+        }
+        .percent{
+            color: #00cfad;
+            font-size: 14px;
+            margin: 27px 0 11px;
+            .icon-up{
+                background-color: #00cfad;
+                display: inline-block;
+                margin-right: 2px;
+            }
+            &.up{
+                color: #ff5151;
+                .icon-up{
+                    background-color: #ff5151;
+                }
+            }
+            &.down{
+                .icon-up{
+                    transform: rotate(180deg);
+                    &.none{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .number{
+            font-size: 32px;
+            margin-bottom: 28px;
+        }
+    }
+    .row-client{
+        .col-6{
+            &:last-child{
+                border-left: 1px solid rgba(151, 151, 151, 0.26);
+            }
+        }
+    }
+    
+    //Not Yet
+    .box-cruncher{
+        .view-all{
+            border-top: 1px dashed rgba(#d7d7d7, 0.52);
+            padding: 17px 0;
+            text-align: right;
+        }
+    }
+    
+    //Box Client
+    
+    //New Management
+    .box-manage{
+        .btn-view{
+            margin-top: 6px;
+        }
+    }
+    .item-manage{
+        .img-oval{
+            margin-top: 3px;
+        }
+        .label{
+            &:first-child{
+                margin-right: 4px;
+            }
+        }
+    }
+    
+    //Chart
+    .chart-dasboard{
+        padding: 17px;
+        .dropdown-toggle{
+            color: $gray-dark;
+            font-family: $font-third;
+            font-size: $font-size-bigger;
+            font-weight: 700;
+            i{
+                padding-left: 5px;
+            }
+            &::after{
+                display: none;
+            }
+        }
+    }
+    
+    //Responsive
+    @media only screen and (max-width: 1360px){
+        .title-status{
+            margin-top: 0;
+            float: none;
+            text-align: right;
+        }
+    }
+    
+    @media only screen and (max-width: 1199px){
+        .row-client {
+            h4{
+                padding: 0 10px;
+                min-height: 30px;
+            }
+        }
+        .sub-title{
+            padding: 10px;
+        }
+    }
+    
+    @media only screen and (max-width: 991px){
+        .title-status{
+            margin-top: -17px;
+        }
+        .row-server{
+            >.col{
+                max-width: 33.33333%;
+                flex-basis: inherit;
+                margin-top: 20px;
+            }
+        }
+        .row-res{
+            >.col{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 767px){
+        .row-server{
+            >.col{
+                max-width: 50%;
+            }
+        }
+        .wrapper-list{
+            padding: 0 10px;
+        }
+    }
+    
+    @media only screen and (max-width: 575px){
+        .sub-title{
+            .date{
+                &.pull-right{
+                    float: none;
+                    display: inherit;
+                }
+            }
+        }
+        .row-server{
+            >.col{
+                max-width: 100%;
+            }
+        }
+        .box-cruncher{
+            .text-right{
+                text-align: left !important;
+            }
+        }
+        .item-message{
+            .btn{
+                float: none;
+                margin: 10px 0;
+            }
+        }
+        .box-message, .box-manage{
+            .btn-view{
+                float: none;
+                display: block;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: 375px){
+        .title-status {
+            margin-top: 0px;
+        }
+    }
+}

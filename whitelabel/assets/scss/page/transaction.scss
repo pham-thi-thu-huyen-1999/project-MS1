@@ -1,0 +1,120 @@
+.transaction{
+    .not-connect{
+        @include border-radius(3px);
+        background-color: $white;
+        padding: 20px 24px;
+        .box-text{
+            padding-top: 3px;
+        }
+        .text{
+            padding-left: 25px;
+            margin-bottom: 0;
+        }
+    }
+    // .dropdown-menu{
+    //     &::after, &::before{
+    //         display: none;
+    //     }
+    //     margin-top: 0;
+    //     border: 1px solid #eaeaea;
+    // }
+    .transaction-list{
+        // margin-top: 10px;
+        .header-wrapper{
+            .month-label{
+                font-size: $font-size-smaller;
+                font-family: $font-second;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                margin:0;
+                color: $gray-darker;
+            }
+            .fa-angle-down{
+                margin-left: 4px;
+                position: relative;
+                top: 1px;
+                opacity: .5;
+            }
+            .fa-angle-down[aria-expanded="true"]{
+                @include transform(180deg);
+            }
+            .balance{
+                @extend .month-label;
+                color: $color-third;
+                opacity: .5;
+            }
+        }
+        .close-balance{
+            @include border-radius(3px);
+            background-color: $white;
+            .close-balance-label{
+                font-size: $font-size-smaller;
+                font-family: $font-second;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                margin:0;
+                opacity: .5;
+            }
+            .row{
+                padding: 19px 15px;
+                border-bottom: 1px solid #f0f2f5;
+            }
+        }
+        .balance-value{
+            font-size: $font-size-normal;
+            color: #262c39;
+            float: right;
+            .unit{
+                font-size: $font-size-smaller;
+                font-family: $font-second;
+                text-transform: uppercase; 
+                float: right;
+                margin-top: 4px;
+                margin-left: 10px;
+                color: $color-third;
+                opacity: .5;
+            }
+            .sub{
+                color: $red;
+            }
+            .add{
+                color: $green;
+            }
+        }
+        .balance-date, .balance-cate{
+            font-size: $font-size-smaller;
+            font-family: $font-second;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin:0;
+            color: $color-third;
+            opacity: .5;
+        }
+        .balance-cate{
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .balance-name{
+            color: $gray-darker;
+        }
+        .transaction-item{
+            .list-wrapper{
+                margin-top: 24px;
+                margin-bottom: 24px;
+            }
+            .wrapper-item{
+                @include border-radius(3px);
+                background-color: $white;
+                .row{
+                    padding: 19px 15px;
+                    border-bottom: 1px solid #f0f2f5;
+                }
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,243 @@
+.connect-bank{
+    @include border-radius(3px);
+    background-color: $white;
+    padding: 60px 24px;
+    min-height: 669px;
+    text-align: center;
+    // margin-top: 45px;
+    .connect-step1, .connect-step2, .connect-step3, .connect-step4{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .step-title {
+        font-size: $font-size-normal;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $gray-darker;
+    }
+    .dropdown-toggle{
+        &::after{
+            display: none;
+        }
+    }
+    .fa {
+        position: absolute;
+        right: 17px;
+        font-size: 13px;
+        opacity: .8;
+        color: #464955;
+        &.fa-angle-up {
+            top: 10px;
+        }
+        &.fa-angle-down {
+            bottom: 10px;
+        }
+    }
+    .form-input{
+        font-size: 12px;
+    }
+    .dropdown-menu{
+        max-width: 100%;
+        .dropdown-menu-link{
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: 12px;
+        }
+    }
+    .box-border{
+        @include border-radius(3px);
+        border: 1px solid #f2f2f2;
+        height: 40px;
+        padding-top: 10px;
+        .bank-img{
+            margin-left: 30px;
+            position: relative;
+            top:-2px;
+        }
+        .bank-name{
+            font-size: $font-size-primary;
+            margin-left: 15px;
+        }
+        .btn-other-bank{
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: $font-size-small;
+            color: $color-second;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+    }
+    .contentItem{
+        margin-bottom: 20px;
+        &.border{
+            border-radius: 3px;
+            border: solid 1px #f0f2f5;
+            padding: 13px 15px;
+        }
+        div{
+            padding-left: 0;
+            &:nth-child(2){
+                padding-right: 0;
+                button{
+                    margin: 0 auto;
+                    background-color: transparent;
+                    border: 0;
+                    color: #1c5df4;
+                    font-size: 11px;
+                    font-family: 'CircularStd-Medium';
+                    text-transform: uppercase;
+                    padding: 2.5px 0px;
+                    outline: none;
+                }
+            }
+        }
+        &.relatedTitleSub{
+          border: 0;
+          margin-bottom: 0;
+          padding: 0 10px;
+        }
+        i{
+          &.fa-university{
+            font-size: 22px;
+            color: #c5c7cc;
+            padding: 10px 15px;
+            background-color: #ebeef3;
+            border-radius: 3px;
+          }
+        }
+        p{
+          font-family: "CircularStd-Book", sans-serif;
+          margin-bottom: 0;
+          font-size: 11px;
+          text-align: right;
+          color: #262c39;
+          &.fieldItem{
+            text-align: left;
+          }
+          &.bank-name{
+            display: inline-block;
+            width: 70%;
+            padding-left: 10px;
+            position: absolute;
+            text-align: left;
+            top: 12px;
+          }
+        }
+        label{
+            margin-bottom: 0;
+            margin-left: 16px;
+            display: initial;
+            font-size: 11px;
+            text-align: left;
+            color: #262c39;
+            font-weight: normal;
+        }
+        .box{
+            border-radius: 3px;
+            border: solid 1px #f0f2f5;
+            display: flex;
+            align-items: center;
+            padding: 13px 15px;
+            min-height: 48px;
+        }
+    }
+    .bank-img{
+        width: 18px !important;
+        height: 18px;
+        @include border-radius(50%);
+        border: 1px solid #eee;
+    }
+    .form-login{
+        margin-top: 20px;
+    }
+    .connect-step1{
+        .bank-name{
+            position: relative;
+            top: 1px;
+            margin-left: 10px;
+        }
+        .dropdown-menu-link{
+            color: $gray-darker;
+        }
+    }
+    .connect-step3{
+        .acc-name{
+            font-size: 12px;
+        }
+        .acc-value{
+            font-size: 12px;
+            float: right;
+        }
+        .form-input{
+            color: $gray-dark;
+        }
+        .select-account{
+            .acc-value{
+                margin-right: 30px;
+            }
+        }
+    }
+    .es-time{
+        color: #888b94;
+        font-size: 10px;
+        margin-top: 4px;
+    }
+    .connect-status{
+        font-size: $font-size-normal;
+        font-family: $font-second;
+        color: $color-second;
+        text-transform: uppercase;
+    }
+    .form-label-error{
+        width: 100%;
+        font-size: 11px;
+        display: inline-block;
+        text-align: center;
+    }
+    .connectingLogin{
+        img{
+            width: 100px;
+        }
+        .clock{
+            height: 80px;
+            width: auto;
+        }
+        p{
+            font-family: 'CircularStd-Book', sans-serif;
+            font-size: 16px;
+            text-align: center;
+            color: #888b94;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        .title-box{
+            color: #262c39 !important;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 12px;
+            line-height: 1.33;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.connect-bank-small{
+    .connect-bank{
+        min-height: auto;
+        padding: 0;
+        .connect-step1, .connect-step2, .connect-step3, .connect-step4{
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .step-title{
+            color: $color-sixth;
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 9px;
+        }
+    }
+}
