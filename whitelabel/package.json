@@ -31,7 +31,7 @@
         "draggable": "^4.2.0",
         "font-awesome": "^4.7.0",
         "jquery": "^3.3.1",
-        "node-forge": "^0.7.5",
+        "node-forge": "^0.10.0",
         "nuxt": "^1.4.1",
         "popper.js": "^1.14.3",
         "vue-bootstrap-datetimepicker": "^5.0.1",
